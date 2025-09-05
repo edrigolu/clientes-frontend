@@ -1,16 +1,16 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { ClienteDetailsComponent } from '../cliente-details/cliente-details.component';
+import { FormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
-import { MatButtonModule } from '@angular/material/button';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { FormsModule } from '@angular/forms';
+import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { Cliente } from '../../interfaces/cliente';
 import { ClienteService } from '../../services/cliente.service';
-import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar'; 
-import { MatIconModule } from '@angular/material/icon';
+import { ClienteDetailsComponent } from '../cliente-details/cliente-details.component';
 
 @Component({
   selector: 'app-cliente-search',
@@ -42,7 +42,7 @@ export class ClienteSearchComponent {
   buscarCliente(): void {
     if (!this.identificacion.trim()) return;
 
-    // ✅ Cancelar timer anterior si existe
+    // Cancelar timer anterior si existe
     if (this.autoClearTimer) {
       clearTimeout(this.autoClearTimer);
     }
@@ -56,11 +56,11 @@ export class ClienteSearchComponent {
         this.cliente = cliente;
         this.loading = false;
         
-        // ✅ Auto-limpieza después de 5 segundos (éxito)
+        // Auto-limpieza después de 5 segundos (éxito)
         this.autoClearTimer = setTimeout(() => {
           this.limpiarBusqueda();
           this.snackBar.open('Búsqueda limpiada automáticamente', 'Cerrar', {
-            duration: 3000,
+            duration: 5000,
             panelClass: ['success-snackbar']
           });
         }, 5000);
@@ -71,11 +71,11 @@ export class ClienteSearchComponent {
           : 'Error al buscar el cliente';
         this.loading = false;
         
-        // ✅ Auto-limpieza después de 5 segundos (error)
+        // Auto-limpieza después de 5 segundos (error)
         this.autoClearTimer = setTimeout(() => {
           this.limpiarBusqueda();
           this.snackBar.open('Búsqueda limpiada automáticamente', 'Cerrar', {
-            duration: 3000,
+            duration: 5000,
             panelClass: ['warn-snackbar']
           });
         }, 5000);
@@ -88,14 +88,14 @@ export class ClienteSearchComponent {
     this.cliente = null;
     this.error = '';
     
-    // ✅ Cancelar timer al limpiar manualmente
+    // Cancelar timer al limpiar manualmente
     if (this.autoClearTimer) {
       clearTimeout(this.autoClearTimer);
       this.autoClearTimer = null;
     }
   }
 
-  // ✅ Limpiar timer cuando el componente se destruye
+  // Limpiar timer cuando el componente se destruye
   ngOnDestroy() {
     if (this.autoClearTimer) {
       clearTimeout(this.autoClearTimer);
