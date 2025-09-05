@@ -1,0 +1,51 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Búsqueda de Clientes</mat-card-title>
+    <mat-card-subtitle>Ingrese el número de identificación</mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-card-content>
+    <div class="search-form">
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Número de Identificación</mat-label>
+        <input
+          matInput
+          [(ngModel)]="identificacion"
+          placeholder="Ej: 12345678A"
+          (keyup.enter)="buscarCliente()"
+        />
+      </mat-form-field>
+
+      <div class="buttons-container">
+        <button
+          mat-raised-button
+          color="primary"
+          (click)="buscarCliente()"
+          [disabled]="loading || !identificacion.trim()"
+          class="search-button"
+        >
+          <span *ngIf="!loading">Buscar</span>
+          <mat-spinner diameter="20" *ngIf="loading"></mat-spinner>
+        </button>
+
+        <!-- ✅ BOTÓN LIMPIAR -->
+        <button 
+          mat-button 
+          color="warn" 
+          (click)="limpiarBusqueda()"
+          [disabled]="loading"
+          class="clear-button"
+        >
+          <mat-icon>clear</mat-icon>
+          Limpiar
+        </button>
+      </div>
+    </div>
+
+    <div *ngIf="error" class="error-message">
+      <mat-error>{{ error }}</mat-error>
+    </div>
+  </mat-card-content>
+</mat-card>
+
+<app-cliente-details *ngIf="cliente" [cliente]="cliente"></app-cliente-details>

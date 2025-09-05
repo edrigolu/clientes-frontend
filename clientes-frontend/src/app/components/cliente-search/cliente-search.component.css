@@ -1,0 +1,53 @@
+.search-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.buttons-container {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.search-button {
+  min-width: 100px;
+  height: 56px;
+}
+
+.clear-button {
+  height: 56px;
+}
+
+.error-message {
+  margin-top: 16px;
+  text-align: center;
+}
+
+/* Estilos para snackbars */
+.success-snackbar {
+  background-color: #4caf50 !important;
+  color: white !important;
+}
+
+.warn-snackbar {
+  background-color: #ff9800 !important;
+  color: white !important;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .buttons-container {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .search-button, .clear-button {
+    width: 100%;
+  }
+}

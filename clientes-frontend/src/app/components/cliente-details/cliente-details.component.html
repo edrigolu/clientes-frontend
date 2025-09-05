@@ -1,0 +1,50 @@
+<mat-card class="details-card">
+  <mat-card-header>
+    <mat-card-title>Información del Cliente</mat-card-title>
+    <mat-card-subtitle>Datos encontrados</mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-divider></mat-divider>
+
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item>
+        <mat-icon matListItemIcon>badge</mat-icon>
+        <div matListItemTitle>ID</div>
+        <div matListItemLine>{{ cliente.idCliente }}</div>
+      </mat-list-item>
+
+      <mat-list-item>
+        <mat-icon matListItemIcon>fingerprint</mat-icon>
+        <div matListItemTitle>Identificación</div>
+        <div matListItemLine>{{ cliente.identificacion }}</div>
+      </mat-list-item>
+
+      <mat-list-item>
+        <mat-icon matListItemIcon>person</mat-icon>
+        <div matListItemTitle>Nombre</div>
+        <div matListItemLine>{{ cliente.nombre }} {{ cliente.apellido }}</div>
+      </mat-list-item>
+
+      <mat-list-item>
+        <mat-icon matListItemIcon>email</mat-icon>
+        <div matListItemTitle>Correo</div>
+        <div matListItemLine>{{ cliente.email }}</div>
+      </mat-list-item>
+
+      <mat-list-item>
+        <mat-icon matListItemIcon>calendar_today</mat-icon>
+        <div matListItemTitle>Fecha de Creación</div>
+        <div matListItemLine>{{ cliente.fechaCreacion | date : "medium" }}</div>
+      </mat-list-item>
+
+      <mat-list-item>
+        <mat-icon matListItemIcon>update</mat-icon>
+        <div matListItemTitle>Última Actualización</div>
+        <div matListItemLine>
+          {{ cliente.fechaActualizacion | date : "medium" }}
+        </div>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>
