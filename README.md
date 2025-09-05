@@ -48,8 +48,35 @@ src/
 ### Pasos:
 1. **Clonar repositorio**   
    git clone https://github.com/edrigolu/clientes-frontend.git
+   
    cd clientes-frontend
    
-2.Instalar dependencias
+2. Instalar dependencias
 
    npm install
+
+3. Configurar API URL en src/app/services/cliente.service.ts
+   
+typescript
+
+private apiUrl = 'https://localhost:7277/api/clientes';
+
+4. Ejecutar aplicacion
+   ng serve --o
+
+5. Abrir navegador
+   
+http://localhost:4200
+
+🎯 Funcionalidades
+Búsqueda de Clientes
+
+Campo de búsqueda por identificación
+
+Validación de entrada
+
+Spinner de carga durante peticiones
+
+Manejo de errores (404 Not Found)
+
+
