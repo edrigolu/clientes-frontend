@@ -79,4 +79,68 @@ Spinner de carga durante peticiones
 
 Manejo de errores (404 Not Found)
 
+Visualización de Datos
+Tarjeta con información completa del cliente
+
+Iconos descriptivos para cada campo
+
+Formato de fechas amigable
+
+Diseño responsive
+
+Características UX
+✅ Auto-limpieza después de 5 segundos
+
+✅ Botón de limpieza manual
+
+✅ Notificaciones SnackBar
+
+✅ Responsive design
+
+🔧 Desarrollo
+Servicio API
+typescript
+@Injectable({ providedIn: 'root' })
+export class ClienteService {
+  private apiUrl = 'https://localhost:7277/api/clientes';
+
+  constructor(private http: HttpClient) { }
+
+  buscarPorIdentificacion(identificacion: string): Observable<Cliente> {
+    return this.http.get<Cliente>(`${this.apiUrl}/${identificacion}`);
+  }
+}
+Componente de Búsqueda
+Reactive forms con validación
+
+Manejo de estados de loading
+
+Suscripciones manejadas con RxJS
+
+Cleanup automático
+
+🎨 Temas y Estilos
+Tema principal: Azure/Blue de Angular Material
+
+Diseño responsive: Mobile-first
+
+Iconografía: Material Icons
+
+Animaciones: Angular Animations
+
+📱 Compatibilidad
+✅ Chrome 90+
+
+✅ Firefox 88+
+
+✅ Safari 14+
+
+✅ Edge 90+
+
+✅ Mobile browsers
+
+
+
+
+
 
