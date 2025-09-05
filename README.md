@@ -36,3 +36,19 @@ src/
 │ │ └── cliente.interface.ts
 │ ├── app.component.ts
 │ └── app.config.ts
+
+
+## 🚀 Instalación y Ejecución
+
+### Prerrequisitos
+- Node.js 18+
+- Angular CLI 18+
+- API Backend ejecutándose
+
+### Pasos:
+1. **Clonar repositorio**   
+   git clone https://github.com/edrigolu/clientes-frontend.git
+   cd clientes-frontend
+   
+2.Instalar dependencias
+   npm install
