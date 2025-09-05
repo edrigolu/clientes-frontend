@@ -57,9 +57,7 @@ src/
 
 3. Configurar API URL en src/app/services/cliente.service.ts
    
-typescript
-
-private apiUrl = 'https://localhost:44324/api/clientes';
+   private apiUrl = 'https://localhost:44324/api/clientes';
 
 4. Ejecutar aplicacion
    ng serve --o
@@ -68,25 +66,19 @@ private apiUrl = 'https://localhost:44324/api/clientes';
    
 http://localhost:4200
 
-Funcionalidades
-Búsqueda de Clientes
+FUNCIONALIDADES
 
-Campo de búsqueda por identificación
-
-Validación de entrada
-
-Spinner de carga durante peticiones
-
-Manejo de errores (404 Not Found)
+- Búsqueda de Clientes
+- Campo de búsqueda por identificación
+- Validación de entrada
+- Spinner de carga durante peticiones
+- Manejo de errores (404 Not Found)
 
 Visualización de Datos
-Tarjeta con información completa del cliente
-
-Iconos descriptivos para cada campo
-
-Formato de fechas amigable
-
-Diseño responsive
+- Tarjeta con información completa del cliente
+- Iconos descriptivos para cada campo
+- Formato de fechas amigable
+- Diseño responsive
 
 Características UX
 - Auto-limpieza después de 5 segundos
@@ -118,21 +110,14 @@ Suscripciones manejadas con RxJS
 Cleanup automático
 
 Temas y Estilos
-Tema principal: Azure/Blue de Angular Material
-
-Diseño responsive: Mobile-first
-
-Iconografía: Material Icons
-
-Animaciones: Angular Animations
+- Tema principal: Azure/Blue de Angular Material
+- Diseño responsive: Mobile-first
+- Iconografía: Material Icons
+- Animaciones: Angular Animations
 
 Compatibilidad
 - Chrome 90+
-
 - Firefox 88+
-
 - Safari 14+
-
 - Edge 90+
-
 - Mobile browsers
