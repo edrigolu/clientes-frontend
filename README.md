@@ -1,13 +1,13 @@
 # clientes-frontend
 
-## 📋 **README.md para FRONTEND (Angular)**
+## **README.md para FRONTEND (Angular)**
 
 
-# 🎨 Clientes Frontend - Angular 18
+# Clientes Frontend - Angular 18
 
 Aplicación frontend desarrollada en Angular 18 para consumo de la API de gestión de clientes.
 
-## 📦 Tecnologías Utilizadas
+## Tecnologías Utilizadas
 
 - **Angular 18**
 - **Angular Material 18**
@@ -15,16 +15,16 @@ Aplicación frontend desarrollada en Angular 18 para consumo de la API de gesti�
 - **RxJS 7.8**
 - **CSS3**
 
-## 🎨 Características
+## Características
 
-- ✅ Búsqueda de clientes por identificación
-- ✅ Interfaz responsive con Angular Material
-- ✅ Manejo de estados (loading, error, éxito)
-- ✅ Auto-limpieza después de 5 segundos
-- ✅ Notificaciones SnackBar
-- ✅ Diseño moderno con tema Azure/Blue
+- Búsqueda de clientes por identificación
+- Interfaz responsive con Angular Material
+- Manejo de estados (loading, error, éxito)
+- Auto-limpieza después de 5 segundos
+- Notificaciones SnackBar
+- Diseño moderno con tema Azure/Blue
 
-## 🏗️ Estructura del Proyecto
+## Estructura del Proyecto
 src/
 ├── app/
 │ ├── components/
@@ -38,7 +38,7 @@ src/
 │ └── app.config.ts
 
 
-## 🚀 Instalación y Ejecución
+## Instalación y Ejecución
 
 ### Prerrequisitos
 - Node.js 18+
@@ -68,7 +68,7 @@ private apiUrl = 'https://localhost:44324/api/clientes';
    
 http://localhost:4200
 
-🎯 Funcionalidades
+Funcionalidades
 Búsqueda de Clientes
 
 Campo de búsqueda por identificación
@@ -89,15 +89,12 @@ Formato de fechas amigable
 Diseño responsive
 
 Características UX
-✅ Auto-limpieza después de 5 segundos
+- Auto-limpieza después de 5 segundos
+- Botón de limpieza manual
+- Notificaciones SnackBar
+- Responsive design
 
-✅ Botón de limpieza manual
-
-✅ Notificaciones SnackBar
-
-✅ Responsive design
-
-🔧 Desarrollo
+Desarrollo
 Servicio API
 typescript
 @Injectable({ providedIn: 'root' })
@@ -110,6 +107,7 @@ export class ClienteService {
     return this.http.get<Cliente>(`${this.apiUrl}/${identificacion}`);
   }
 }
+
 Componente de Búsqueda
 Reactive forms con validación
 
@@ -119,7 +117,7 @@ Suscripciones manejadas con RxJS
 
 Cleanup automático
 
-🎨 Temas y Estilos
+Temas y Estilos
 Tema principal: Azure/Blue de Angular Material
 
 Diseño responsive: Mobile-first
@@ -128,13 +126,13 @@ Iconografía: Material Icons
 
 Animaciones: Angular Animations
 
-📱 Compatibilidad
-✅ Chrome 90+
+Compatibilidad
+- Chrome 90+
 
-✅ Firefox 88+
+- Firefox 88+
 
-✅ Safari 14+
+- Safari 14+
 
-✅ Edge 90+
+- Edge 90+
 
-✅ Mobile browsers
+- Mobile browsers
