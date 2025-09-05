@@ -59,7 +59,7 @@ src/
    
 typescript
 
-private apiUrl = 'https://localhost:7277/api/clientes';
+private apiUrl = 'https://localhost:44324/api/clientes';
 
 4. Ejecutar aplicacion
    ng serve --o
@@ -102,7 +102,7 @@ Servicio API
 typescript
 @Injectable({ providedIn: 'root' })
 export class ClienteService {
-  private apiUrl = 'https://localhost:7277/api/clientes';
+  private apiUrl = 'https://localhost:44324/api/clientes';
 
   constructor(private http: HttpClient) { }
 
@@ -138,9 +138,3 @@ Animaciones: Angular Animations
 ✅ Edge 90+
 
 ✅ Mobile browsers
-
-
-
-
-
-
