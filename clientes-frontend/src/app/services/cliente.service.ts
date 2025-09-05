@@ -7,6 +7,7 @@ import { Cliente } from '../interfaces/cliente';
   providedIn: 'root',
 })
 export class ClienteService {
+  
   private apiUrl = 'https://localhost:44324/api/clientes';
 
   constructor(private http: HttpClient) {}
